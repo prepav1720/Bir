@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Birthday Wishes 🎂 A Celebration of You! 🌟</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #4facfe 75%, #00f2fe 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 3px solid #FFD700;
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .header h1 {
+            font-size: 3.5em;
+            background: linear-gradient(135deg, #FF1493, #FFD700, #00CED1, #FF69B4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            letter-spacing: 2px;
+        }
+        
+        .subheader {
+            font-size: 1.8em;
+            color: #764ba2;
+            margin: 20px 0;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        
+        .emoji-row {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 30px 0;
+            letter-spacing: 15px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .section {
+            margin: 40px 0;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 192, 203, 0.2), rgba(135, 206, 250, 0.2));
+            border-radius: 20px;
+            border-left: 5px solid #FF1493;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section h2 {
+            font-size: 2em;
+            color: #FF1493;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section h3 {
+            font-size: 1.4em;
+            color: #764ba2;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #333;
+            margin: 15px 0;
+        }
+        
+        .wishes-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .wish-card {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border-top: 4px solid #FFD700;
+        }
+        
+        .wish-card:hover {
+            transform: scale(1.05);
+        }
+        
+        .wish-card .emoji {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .wish-card .text {
+            font-size: 1em;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 3px dashed #FFD700;
+            font-size: 1.3em;
+            color: #764ba2;
+            font-weight: bold;
+        }
+        
+        .sparkles {
+            font-size: 1.5em;
+            display: inline-block;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px;
+                border-radius: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2.5em;
+            }
+            
+            .subheader {
+                font-size: 1.3em;
+            }
+            
+            .emoji-row {
+                font-size: 2em;
+                letter-spacing: 10px;
+            }
+            
+            .wishes-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>🎉 HAPPY BIRTHDAY! 🎂</h1>
+            <div class="emoji-row">🌟✨💫⭐🌠</div>
+            <p class="subheader">✨ A Special Day for a Special Person ✨</p>
+        </div>
+        
+        <!-- Main Celebration Section -->
+        <div class="section">
+            <h2>🎊 A Day of Pure Joy & Celebration 🎊</h2>
+            <h3>💝 Dear Amazing Friend,</h3>
+            <p>
+                Today is YOUR day! 🎈 A magical day that celebrates the incredible, wonderful, and absolutely spectacular person that you are! 
+                From the moment you were born, the world became a brighter place, and today we honor every single beautiful moment of your journey! 🌈
+            </p>
+            <div class="emoji-row" style="font-size: 2em;">🎈🎁🎀🎊🎉</div>
+        </div>
+        
+        <!-- Wishes & Blessings -->
+        <div class="section">
+            <h2>🌟 Wishing You Everything Wonderful 🌟</h2>
+            <h3>💖 Our Special Wishes for You:</h3>
+            <div class="wishes-list">
+                <div class="wish-card">
+                    <div class="emoji">😊</div>
+                    <div class="text">Endless Happiness & Laughter</div>
+                </div>
+                <div class="wish-card">
+                    <div class="emoji">💪</div>
+                    <div class="text">Strength & Success in All You Do</div>
+                </div>
+                <div class="wish-card">
+                    <div class="emoji">💕</div>
+                    <div class="text">Love & Cherished Moments</div>
+                </div>
+                <div class="wish-card">
+                    <div class="emoji">🌈</div>
+                    <div class="text">Dreams Coming True</div>
+                </div>
+                <div class="wish-card">
+                    <div class="emoji">🚀</div>
+                    <div class="text">Amazing Adventures Ahead</div>
+                </div>
+                <div class="wish-card">
+                    <div class="emoji">🌺</div>
+                    <div class="text">Growth & Beautiful Memories</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Why You're Amazing -->
+        <div class="section">
+            <h2>👑 You Are Absolutely Incredible! 👑</h2>
+            <h3>✨ What Makes You Special:</h3>
+            <p>
+                🌟 Your kindness radiates and touches everyone around you<br>
+                💫 Your laughter is contagious and brings joy to our hearts<br>
+                🎯 Your determination inspires us all to be better<br>
+                💎 Your uniqueness is your superpower<br>
+                🌸 Your presence makes every moment more beautiful<br>
+                🔥 Your passion and energy are absolutely contagious!
+            </p>
+        </div>
+        
+        <!-- Celebration Time -->
+        <div class="section">
+            <h2>🎂 Time to Celebrate in Grand Style! 🍰</h2>
+            <h3>🎁 Make This Day Unforgettable:</h3>
+            <p>
+                🎊 Cake, candles, and wishes come true<br>
+                🎉 Surround yourself with the people you love most<br>
+                🌟 Take a moment to appreciate how far you've come<br>
+                💝 Do something that makes YOUR heart sing<br>
+                🎈 Create memories that will last forever<br>
+                🎭 Celebrate YOU in all your glory!
+            </p>
+        </div>
+        
+        <!-- Closing -->
+        <div class="footer">
+            <div class="sparkles">✨</div>
+            <p style="margin: 20px 0;">
+                🌟 May your birthday be as wonderful as you are! 🌟<br>
+                💖 Wishing you a year filled with blessings, adventures, and endless happiness! 💖<br>
+                🎆 Here's to another year of being absolutely AMAZING! 🎆
+            </p>
+            <div class="emoji-row" style="font-size: 2em; margin-top: 20px;">
+                🎉🎊🎈🎁💝🎂🌟✨💫⭐
+            </div>
+            <p style="margin-top: 20px; font-size: 1.1em;">
+                With all our love & admiration,<br>
+                🎭 Your Friends 🎭
+            </p>
+        </div>
+    </div>
+</body>
+</html>
